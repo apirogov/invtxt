@@ -5,6 +5,7 @@ pkgver=0.1
 pkgrel=1
 pkgdesc="home inventory script inspired by todo.txt"
 url="http://github.com/apirogov/invtxt"
+makedepends=('git')
 depends=('ruby')
 arch=('any')
 license="GPL"

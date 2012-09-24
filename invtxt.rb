@@ -645,9 +645,11 @@ case action
 
           if value[0]=='+' || value[0]=='-' #relative
             value = value[1..-1] if value[0]=='+'
+            entry.amount ||= 0
             entry.amount += value.to_i
+            entry.amount = 0 if entry.amount < 0
           else #absolute
-            entry.amount = value.to_i
+            entry.amount = value.to_i >= 0 ? value.to_i : 0
           end
         end
 
